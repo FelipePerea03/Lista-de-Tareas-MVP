@@ -1,0 +1,16 @@
+{
+  "name": "lista-de-tareas-mvp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mr Overman",
+  "license": "ISC",
+  "description": "This project is a To Do List web application that allows users to add, delete and mark tasks as completed. It uses a backend server built with Node.js and Express, and connects to an SQLite database to store tasks.",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
