@@ -49,6 +49,17 @@ app.delete('/api/tasks/:id', (req, res) => {
     });
 });
 
+// Nueva ruta para ver los datos almacenados en la base de datos
+app.get('/api/debug', (req, res) => {
+    db.all("SELECT * FROM tasks", (err, rows) => {
+        if (err) {
+            res.status(500).json({error: err.message});
+            return;
+        }
+        res.json({tasks: rows});
+    });
+});
+
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
 });
